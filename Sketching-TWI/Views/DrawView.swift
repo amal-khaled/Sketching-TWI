@@ -11,7 +11,8 @@ import UIKit
 class DrawView: UIView {
     var isDrawing = false
     var lines: Array = [Line]()
-    var undoList : Array = [Line]()
+    var shapes :Array = [Shape]()
+    var undoList : Array = [Shape]()
     var lastPoint : CGPoint!
     
     
@@ -20,14 +21,14 @@ class DrawView: UIView {
     override func draw(_ rect: CGRect) {
         // Drawing code
         let context = UIGraphicsGetCurrentContext()
-//        CGContextBeginePath(context)
-
         context?.beginPath()
         
-        for line in lines{
-            context?.move( to: line.start)
-            context?.addLine(to: line.end)
-            
+        for shap in shapes{
+            for line in shap.lines{
+                context?.move( to: line.start)
+                context?.addLine(to: line.end)
+                
+            }
         }
         context?.setLineCap(CGLineCap.round)
         context?.setStrokeColor(UIColor.red.cgColor)
@@ -44,7 +45,7 @@ class DrawView: UIView {
         guard let touch = touches.first else {return}
         lastPoint = touch.location(in: self)
         
-        print(lastPoint)
+        shapes.append(Shape(lines: lines))
         
     }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -55,6 +56,8 @@ class DrawView: UIView {
         
         let newPoint = touch.location(in: self)
         lines.append(Line(start: lastPoint ,end: newPoint))
+        shapes.last?.lines = lines
+
         lastPoint = newPoint
         self.setNeedsDisplay()
     }
@@ -68,10 +71,30 @@ class DrawView: UIView {
         
         let newPoint = touch.location(in: self)
         lines.append(Line(start: lastPoint ,end: newPoint))
+        shapes.last?.lines = lines
         lastPoint = nil
+        lines = []
 //        lastPoint = newPoint
 
         self.setNeedsDisplay()
     }
     
+    
+}
+extension DrawView {
+    //get UIView as Image
+    func getImage()-> UIImage{
+        return UIImage(view: self)
+    }
+}
+
+extension UIImage {
+    //convert uiView to UIImage
+    convenience init(view: UIView) {
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.layer.render(in:UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.init(cgImage: image!.cgImage!)
+    }
 }

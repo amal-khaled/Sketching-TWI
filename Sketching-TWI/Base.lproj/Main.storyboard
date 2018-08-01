@@ -34,13 +34,30 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8ab-FP-p1A">
+                        <leftBarButtonItems>
+                            <barButtonItem title="New" id="2yW-1z-G3s">
+                                <connections>
+                                    <action selector="newTapped:" destination="BYZ-38-t0r" id="b3G-HL-ubZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Save" id="mH3-2j-tvO">
+                                <connections>
+                                    <action selector="saveAsImageTapped:" destination="BYZ-38-t0r" id="59Z-bJ-DpT"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Upload" id="Xhs-ih-1uu">
+                                <connections>
+                                    <action selector="uploadImageTapped:" destination="BYZ-38-t0r" id="gb3-8E-F0n"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <rightBarButtonItems>
-                            <barButtonItem title="undo" id="IsN-iS-CoL">
+                            <barButtonItem systemItem="undo" id="IsN-iS-CoL">
                                 <connections>
                                     <action selector="undoTapped:" destination="BYZ-38-t0r" id="IjH-M8-9G7"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="redo" id="rbZ-2n-i6r">
+                            <barButtonItem systemItem="redo" id="rbZ-2n-i6r">
                                 <connections>
                                     <action selector="redoTaped:" destination="BYZ-38-t0r" id="M7l-r2-kXd"/>
                                 </connections>

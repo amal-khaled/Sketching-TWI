@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		966334F221123BD2007E39B6 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966334F121123BD2007E39B6 /* Shape.swift */; };
 		96EE1B832110770C00CE1CAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE1B822110770C00CE1CAF /* AppDelegate.swift */; };
 		96EE1B852110770C00CE1CAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE1B842110770C00CE1CAF /* ViewController.swift */; };
 		96EE1B882110770C00CE1CAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EE1B862110770C00CE1CAF /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		966334F121123BD2007E39B6 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		96EE1B7F2110770C00CE1CAF /* Sketching-TWI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sketching-TWI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EE1B822110770C00CE1CAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96EE1B842110770C00CE1CAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +41,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		966334F321124D13007E39B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96EE1B962110894D00CE1CAF /* Line.swift */,
+				966334F121123BD2007E39B6 /* Shape.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		966334F421124D52007E39B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96EE1B942110786C00CE1CAF /* DrawView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		96EE1B762110770B00CE1CAF = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +77,14 @@
 		96EE1B812110770C00CE1CAF /* Sketching-TWI */ = {
 			isa = PBXGroup;
 			children = (
+				966334F421124D52007E39B6 /* Views */,
+				966334F321124D13007E39B6 /* Models */,
 				96EE1B822110770C00CE1CAF /* AppDelegate.swift */,
 				96EE1B842110770C00CE1CAF /* ViewController.swift */,
 				96EE1B862110770C00CE1CAF /* Main.storyboard */,
 				96EE1B892110770C00CE1CAF /* Assets.xcassets */,
 				96EE1B8B2110770C00CE1CAF /* LaunchScreen.storyboard */,
 				96EE1B8E2110770C00CE1CAF /* Info.plist */,
-				96EE1B942110786C00CE1CAF /* DrawView.swift */,
-				96EE1B962110894D00CE1CAF /* Line.swift */,
 			);
 			path = "Sketching-TWI";
 			sourceTree = "<group>";
@@ -144,6 +163,7 @@
 			files = (
 				96EE1B852110770C00CE1CAF /* ViewController.swift in Sources */,
 				96EE1B972110894D00CE1CAF /* Line.swift in Sources */,
+				966334F221123BD2007E39B6 /* Shape.swift in Sources */,
 				96EE1B832110770C00CE1CAF /* AppDelegate.swift in Sources */,
 				96EE1B952110786C00CE1CAF /* DrawView.swift in Sources */,
 			);
