@@ -12,6 +12,8 @@
 		96EE1B882110770C00CE1CAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EE1B862110770C00CE1CAF /* Main.storyboard */; };
 		96EE1B8A2110770C00CE1CAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96EE1B892110770C00CE1CAF /* Assets.xcassets */; };
 		96EE1B8D2110770C00CE1CAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EE1B8B2110770C00CE1CAF /* LaunchScreen.storyboard */; };
+		96EE1B952110786C00CE1CAF /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE1B942110786C00CE1CAF /* DrawView.swift */; };
+		96EE1B972110894D00CE1CAF /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE1B962110894D00CE1CAF /* Line.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		96EE1B892110770C00CE1CAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96EE1B8C2110770C00CE1CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96EE1B8E2110770C00CE1CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96EE1B942110786C00CE1CAF /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		96EE1B962110894D00CE1CAF /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				96EE1B892110770C00CE1CAF /* Assets.xcassets */,
 				96EE1B8B2110770C00CE1CAF /* LaunchScreen.storyboard */,
 				96EE1B8E2110770C00CE1CAF /* Info.plist */,
+				96EE1B942110786C00CE1CAF /* DrawView.swift */,
+				96EE1B962110894D00CE1CAF /* Line.swift */,
 			);
 			path = "Sketching-TWI";
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				96EE1B852110770C00CE1CAF /* ViewController.swift in Sources */,
+				96EE1B972110894D00CE1CAF /* Line.swift in Sources */,
 				96EE1B832110770C00CE1CAF /* AppDelegate.swift in Sources */,
+				96EE1B952110786C00CE1CAF /* DrawView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 497UEXZ83L;
 				INFOPLIST_FILE = "Sketching-TWI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TWI.Sketching-TWI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 497UEXZ83L;
 				INFOPLIST_FILE = "Sketching-TWI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TWI.Sketching-TWI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
