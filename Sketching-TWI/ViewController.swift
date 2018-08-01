@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var drawingView: DrawView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,5 +22,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func redoTaped(_ sender: Any) {
+        guard let lastElement = drawingView.undoList.popLast() else {return}
+        drawingView.lines.append( lastElement)
+        drawingView.setNeedsDisplay()
+    }
+    @IBAction func undoTapped(_ sender: Any) {
+        guard let lastElement =  drawingView.lines.popLast() else {return}
+        drawingView.undoList.append( lastElement)
+        drawingView.setNeedsDisplay()
+
+    }
 }
 

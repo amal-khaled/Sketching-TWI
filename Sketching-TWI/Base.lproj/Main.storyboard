@@ -35,10 +35,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="8ab-FP-p1A">
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" id="IsN-iS-CoL"/>
-                            <barButtonItem title="Item" id="rbZ-2n-i6r"/>
+                            <barButtonItem title="undo" id="IsN-iS-CoL">
+                                <connections>
+                                    <action selector="undoTapped:" destination="BYZ-38-t0r" id="IjH-M8-9G7"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="redo" id="rbZ-2n-i6r">
+                                <connections>
+                                    <action selector="redoTaped:" destination="BYZ-38-t0r" id="M7l-r2-kXd"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="drawingView" destination="8MJ-oB-Lhb" id="YZh-tt-01H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

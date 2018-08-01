@@ -11,6 +11,7 @@ import UIKit
 class DrawView: UIView {
     var isDrawing = false
     var lines: Array = [Line]()
+    var undoList : Array = [Line]()
     var lastPoint : CGPoint!
     
     
